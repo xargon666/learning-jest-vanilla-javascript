@@ -5,8 +5,8 @@
   "main": "script.js",
   "scripts": {
     "start": "concurrently \"node script.js\" \"python3 -m http.server\" ",
-    "dev": "python3 -m http.server",
-    "test": "jest --watchAll",
+    "dev": "python -m http.server",
+    "test": "jest --watchAll --verbose",
     "coverage": "jest --coverage"
   },
   "keywords": [],
