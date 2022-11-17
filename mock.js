@@ -13,3 +13,4 @@ function popup(str){
     window.alert(msg)
 }
 
+module.exports = {onClickEvent}
