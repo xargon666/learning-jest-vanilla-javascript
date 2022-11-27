@@ -2,7 +2,6 @@ class Turret {
     constructor(ammo = 50) {
         this._ammo = ammo
     }
-
     get ammo() {
         return `Current Ammo Count: ${this._ammo}`
     }
@@ -12,7 +11,7 @@ class Turret {
         }
         this._ammo = val
     }
-    reload(){
+    reload() {
         return this.ammo = 100
     }
 }
@@ -45,3 +44,47 @@ const p1 = new Person('Dave')
 console.log(p1)
 p1.name = 'Chris'
 console.log(p1.name)
+
+
+const turretObject = {
+    name: "Bob",
+    targets: [],
+}
+function addTarget(turret, x, y, z) {
+    turret.targets.push({ x: x, y: y, z: z })
+}
+
+let enemyPosition = { x: 10, y: 0, z: 10 }
+addTarget(turretObject, enemyPosition.x, enemyPosition.y, enemyPosition.z)
+console.log(turretObject)
+
+console.log("hello world")
+console.log("hello world")
+
+const orders = [
+    {
+        orderId: "123",
+        items: [{
+            productId: "456"
+        },
+        {
+            productId: "457"
+        }
+    ]
+    },
+    {
+        orderId: "124",
+        items: [{
+            productId: "999"
+        }]
+    },
+    {
+        orderId: "125",
+        items: [{
+            productId: "666"
+        }]
+    }
+]
+console.log(orders[0])
+const output = orders.find((o) => o.orderId === "123")
+console.log(output)
