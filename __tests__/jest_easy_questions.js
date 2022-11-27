@@ -1,5 +1,12 @@
 // ============================================================
 // toBe() Question
+
+const data = {
+    Description: "The toBe matcher tests exact equality. Useful for testing for if a specific value.",
+    hint: "If you need hints at this point, you're in trouble dude.",
+    failure: "Check you're spelling 'toBe' right!",
+    Success: "Congratulations, you've passed the first jest. I mean test. Jest test."
+}
 function activate(turret) {
     turret.status === "Safe" && (turret.status = "Armed")
 }
@@ -19,6 +26,15 @@ describe('Turret Status', () => {
 
     // ============================================================
     // not.toBe() Question
+    
+    
+    const data2 = {
+        Description: "To return the opposite of matchers normal function, you can use the '.not' modifier.",
+        hint: "Make sure you have your dots in a row.",
+        failure: "Close! You were really close that time... not",
+        Success: "Congratulations... not. No really, good job."
+    }
+    
     function deactivate(turret) {
         turret.status === "Armed" && (turret.status = "Safe")
     }
@@ -41,7 +57,13 @@ describe('Turret Status', () => {
     // ============================================================ 
     // toEqual() Question
     // toEqual can be used to compare objects.
-    class Turret {
+    const data3 = {
+        Description: "If you try testing exact object equality, you might run into some trouble using the .toBe matcher. You might also find yourself wanting to test multiple values through the same test (though I've never got that to work). Fear not, the 'toEqual' matcher comes to the rescue.",
+        hint: "I couldn't make these tests toEqual easier.",
+        failure: "toEqual is pretty much the answer here.",
+        Success: ".toEqual() or .not.toEqual()... that's right, it was toEqual()."
+    }
+   class Turret {
         constructor(ammo = 100) {
             this._ammo = ammo
         }
@@ -79,6 +101,13 @@ describe('Turret Status', () => {
     // ============================================================
     // toBeTruthy() Question
     // used to test boolean expressions
+    const data4 = {
+        Description: "If you need to test a boolean value, evaluate an expression or test if a variable has a value assigned or is null, there are a variety of specific matchers for this, including the toTruthy and toFalsy matchers.",
+        hint: "Remember, if an array element exists, it evaluates to truthy.",
+        failure: "Wrong matcher, try again.",
+        Success: "It was true all along, you are the chosen one."
+    }
+
     function addTarget(turret, x, y, z) {
         turret.targets.push({ x: x, y: y, z: z })
     }
@@ -103,8 +132,16 @@ describe('Turret Status', () => {
 
     // ============================================================
     // toBeLessThan() question
+    const data5 = {
+        Description: "Testing greater/lesser or greater or equal to etc... couldn't be easier with the toBeGreaterThan() matcher and it's close relatives.",
+        hint: "Concentrate, focus, picture the numbers in your mind. What is different about them? Wait... one of them is... something than the other!",
+        failure: "Maybe you spelt it wrong, maybe you're just not cut out for this. Either way, I win.",
+        Success: "Nobody is GreaterThan(you) at this game."
+    }
+
+
     function fire(turret) {
-        turret?.ammo -= 1
+        turret?.ammo > 0 && (turret.ammo -= 1)
     }
 
     describe('Turret Ammo', () => {
@@ -129,6 +166,12 @@ describe('Turret Status', () => {
 
     // ==================================================================================================== 
     // toThrow
+    const data5 = {
+        Description: "Sometimes you want to test that when a function produces an error, it produces the error you expect it to. Thats where toThrow() comes in.",
+        hint: "We're looking for a specific matcher here... I might have mentioned it somewhere. You've probably got the hang of this by now.",
+        failure: "How far can you throw your laptop?",
+        Success: "You are the greatest throw sure."
+    }
     class Turret {
         constructor(ammo = 100) {
             this._ammo = ammo
