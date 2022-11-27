@@ -1,19 +1,21 @@
 // ============================================================
 // toBe() Question
-
+function activate(turret) {
+    turret.status === "Safe" && (turret.status = "Armed")
+    
 describe('Turret Status', () => {
     test("activate method sets status to 'Armed'", () => {
-        turret.activate
-        expect(turret.status).____("Armed")
+        const turret1 = {status: "Safe"}
+        activate(turret1)
+        expect(turret1.status).____("Armed")
     })
 })
-
 describe('Turret Status', () => {
     test("activate method sets status to 'Armed'", () => {
-        turret.activate
-        expect(turret.status).toBe("Armed")
+        const turret1 = {status: "Safe"}
+        activate(turret1)
+        expect(turret1.status).toBe("Armed")
     })
-})
 
 // ============================================================
 // not.toBe() Question
