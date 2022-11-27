@@ -20,6 +20,8 @@ describe('Button1 click', () => {
         const outputAfter = output.textContent
         expect(outputBefore).not.toBe(outputAfter)
     });
+});
+
 describe('Button2 click', () => {
     it('changes background colour', () => {
         const myButton2 = document.getElementById('button-test2')
@@ -31,4 +33,3 @@ describe('Button2 click', () => {
     });
 });
 
-});
